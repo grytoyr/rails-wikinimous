@@ -1,0 +1,12 @@
+<div class="page-wrap">
+  <div class="content">
+    <h1>Articles overview</h1>
+
+    <% @articles.each do |article| %>
+      <div class="article-wrap">
+        <h3><%= link_to article.title, article_path(article) %></h3>
+        <%= article.content[0...100] %>...
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="page-wrap">
+
+  <div class="content">
+    <div class="article-wrap">
+
+      <div class="article-menu">
+        <div class="article-menu-item">
+          <%= link_to articles_path do %>
+            <i class="fas fa-arrow-left"></i>
+          <% end %>
+        </div>
+        <div class="right-menu-right">
+           <div class="article-menu-item">
+            <%= link_to edit_article_path do %>
+              <i class="far fa-edit"></i>
+            <% end %>
+          </div>
+          <div class="article-menu-item">
+            <%= link_to article_path(@article), class: 'delete',
+              method: :delete,
+              data: { confirm: "Are you sure?" } do %>
+              <i class="far fa-trash-alt"></i>
+          <% end %>
+          </div>
+
+        </div>
+
+      </div>
+
+      <h1 class="article-title"> <%= @article.title %></h1>
+      <div class="space"></div>
+        <p><%= @article.content %>...</p>
+      </div>
+
+  </div>
+</div>

@@ -4,11 +4,20 @@
     <title>RailsWikinimous</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', media: 'all' %>
+    <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css', media: 'all' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <div class="nav">
+    <p>Wikiminious</p>
+    <div class="article-menu-item">
+      <%= link_to new_article_path do %>
+         <i class="far fa-file"></i>
+      <% end %>
 
+    </div>
+  </div>
   <body>
     <%= yield %>
   </body>
